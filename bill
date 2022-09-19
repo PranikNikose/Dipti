@@ -1,0 +1,59 @@
+public class Bill {
+	// Methods
+	public double findPrice(int itemitemId) 
+	{
+		double result = 0; // Made the variable to return the value 
+		
+		if (itemitemId == 1001) 
+		{
+			result = 25.00; //if cond satisfied then store the value into result variable
+		} 
+		else if (itemitemId == 1002) 
+		{
+			result = 20.00;
+		} 
+		else if (itemitemId == 1003) 
+		{
+			result = 23.00;
+		} 
+		else if (itemitemId == 1004) 
+		{
+			result = 18.00;
+		}
+
+		return result; // return the variable 
+	}
+
+	public double findPrice(String brandName, String itemType, int size) 
+	{
+		double result = 0.0; // Made the variable to return the value 
+		
+		//if brandName is PUMA
+		if (brandName.equalsIgnoreCase("puma")) 
+		{
+			if (itemType.equalsIgnoreCase("T-shirt") && (size == 34 || size == 36)) 
+			{
+				result = 25.00; //if cond satisfied then store the value into result variable
+			} 
+			else if (itemType.equalsIgnoreCase("Skirt") && (size == 38 || size == 40)) 
+			{
+				result = 20.00;
+			}
+		} 
+		
+		//if brandName is Rebook
+	    if (brandName.equalsIgnoreCase("Reebok")) 
+		{
+			if (itemType.equalsIgnoreCase("T-shirt") && (size == 34 || size == 36)) 
+			{
+				result = 23.00;
+			} 
+			else if (itemType.equalsIgnoreCase("Skirt") && (size == 38 || size == 40)) 
+			{
+				result = 18.00;
+			}
+		}
+	    
+		return result; // return the variable
+	}
+}
