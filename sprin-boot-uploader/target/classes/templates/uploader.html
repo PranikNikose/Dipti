@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<title>Hello File Uploader</title>
+</head>
+
+<body>
+
+
+<script>
+		async function uploadFile() {
+			alert("File Uploaded clicked");
+			let formData = new FormData();
+			formData.append("file", fileupload.files[0]);
+			let response = await
+			fetch('/upload', {
+				method : "POST",
+				body : formData
+			});
+			if (response.status == 200) {
+				alert("File Uploaded Succesfuly");
+			} else {
+				alert("Error");
+			}
+
+		}
+	</script>
+	<input id="fileupload" type="file" name="fileupload" />
+	<button id="upload-button" onclick="uploadFile();">Upload</button>
+
+	
+
+</body>
+
+</html>
